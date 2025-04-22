@@ -12,7 +12,7 @@ while true; do
 done &
 
 sudo apt update
-sudo apt -y install build-essential git cmake libusb-1.0-0-dev lsof libzmq3-dev clang php-cli nodejs gpsd libfftw3-bin libfftw3-dev
+sudo apt -y install build-essential git cmake libusb-1.0-0-dev lsof libzmq3-dev clang php-cli nodejs npm gpsd libfftw3-bin libfftw3-dev
 
 cd
 git clone https://github.com/krakenrf/librtlsdr
@@ -90,6 +90,9 @@ cd ~/krakensdr_doa
 git clone https://github.com/krakenrf/krakensdr_doa
 cp krakensdr_doa/util/kraken_doa_start.sh .
 cp krakensdr_doa/util/kraken_doa_stop.sh .
+cd krakensdr_doa
+npm i
+cd ..
 
 # OPTIONAL: Install Kraken TAK Server
 git clone https://github.com/canaryradio/Kraken-to-TAK-Python
